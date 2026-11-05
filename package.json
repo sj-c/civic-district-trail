@@ -1,0 +1,15 @@
+{
+  "name": "civic-trail",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Clickable prototype of the Civic District 'Journey to Nationhood' heritage trail app.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

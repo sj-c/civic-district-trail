@@ -1,0 +1,230 @@
+// All user-facing interface text in one place, so the team can edit wording
+// without touching code. Site stories live in data/stops.js.
+
+export const T = {
+  appName: 'Civic Trail',
+  trailTitle: 'Civic District Heritage Trail',
+  trailSubtitle: 'Civic District Heritage Trail',
+  statusTime: '9:58',
+
+  // Map-app home screen (decorative controls, styled after the Google Maps phone app)
+  home: {
+    search: 'Search here',
+    voice: 'Search by voice',
+    lens: 'Search with your camera',
+    account: 'Account',
+    avatar: 'S',
+    chips: [
+      { icon: 'spark', label: 'Ask Maps' },
+      { icon: 'work', label: 'Work' },
+      { icon: 'food', label: 'Restaurants' },
+      { icon: 'cafe', label: 'Coffee' },
+    ],
+    layers: 'Map layers',
+    directions: 'Walking directions to the next stop',
+    noRouteYet: 'Start the heritage trail to get walking directions.',
+    exploreTitle: 'Be in the know',
+    temp: '29°',
+    psi: '68 PSI',
+    weatherAria: '29 degrees, PSI 68',
+    tabsAria: 'Main',
+    tabs: { explore: 'Explore', you: 'You', contribute: 'Contribute' },
+    notInPrototype: "That isn't part of this prototype.",
+  },
+
+  topbar: {
+    recenter: 'Centre on my location',
+    offlineRoute: 'Offline route',
+    offlineRouteTitle: "Couldn't fetch walking directions, so straight lines are shown between stops.",
+  },
+
+  sheet: {
+    show: 'Show card',
+    expand: 'Expand card',
+    minimise: 'Minimise card to see the map',
+    collapse: 'Shrink card',
+    dragHint: 'Drag, tap or use the arrow keys to resize',
+  },
+
+  themes: {
+    nationhood: 'Journey to Nationhood',
+    functions: 'Functions of the Civic District',
+    fortunes: 'Seeking Fortunes, Forging New Lives',
+  },
+
+  prompt: {
+    title: 'You’re standing where Singapore’s story began. Take the Civic District Heritage Trail?',
+    logoAlt: 'Roots',
+    timeQuestion: 'How much time do you have?',
+    minutes: (m) => `${m} min`,
+    start: 'Start the journey',
+    notNow: 'Not now',
+    announce: 'You’re standing where Singapore’s story began. Take the Civic District Heritage Trail?',
+    peek: 'Take the Civic District Heritage Trail?',
+  },
+
+  personalise: {
+    title: 'Build your personalised route',
+    theme: 'Theme',
+    access: 'Access',
+    stepFree: 'Step-free route',
+    shaded: 'Prefer shaded paths',
+    build: 'Build my route',
+    back: 'Back',
+  },
+
+  summary: {
+    title: 'Your route',
+    yourLocation: 'Your location',
+    timeDistance: (mins, km) => `${mins} min${km ? ` · ${km} km` : ''}`,
+    openStop: 'Open stop',
+    cutShort: 'Cut to next 2 stops',
+    more: 'More options',
+    options: 'Route options',
+    share: 'Share route',
+    close: 'Minimise',
+    allDone: 'Journey complete!',
+    allDoneBody: (n) => `You collected ${n} stamp${n === 1 ? '' : 's'}. See your journey card.`,
+    seeCard: 'See journey card',
+    alt: {
+      shadier: 'Shadier route',
+      shorter: 'Shorter route',
+      original: 'Original route',
+      longer: 'Longer route',
+    },
+    cutDone: 'Route shortened to the next 2 stops.',
+    passport: 'Passport',
+    finish: 'Finish journey',
+    computing: 'Finding walking paths…',
+    offlineNote: 'Offline route: straight lines between stops',
+    stopListAria: 'Stops on your route',
+  },
+
+  stop: {
+    close: 'Close',
+    expand: 'Expand card',
+    collapse: 'Collapse card',
+    photo: 'Photo placeholder',
+    photoAlt: (name) => `Photo of ${name}`,
+    stopOf: (i, n) => `Stop ${i} of ${n}`,
+    trailSite: (n) => `Trail site #${n}`,
+    away: (dist) => `${dist} away`,
+    getCloser: 'Get closer to collect the stamp',
+    comingSoon: 'Full story coming soon. Preview below.',
+    storyAria: 'Story',
+    play: 'Play',
+    pause: 'Pause',
+    resume: 'Resume',
+    stopAudio: 'Stop',
+    noSpeech: "Read-aloud isn't available in this browser.",
+    storyDone: 'Story finished ✓',
+    spotTitle: 'Spot this',
+    showHint: 'Show hint',
+    hideHint: 'Hide hint',
+    found: 'Found it!',
+    foundDone: 'Found ✓',
+    next: (name) => `Next stop: ${name}`,
+    lastStop: 'See your journey card',
+  },
+
+  nav: {
+    start: 'Start',
+    startTo: (name) => `Start · walk to ${name}`,
+    startAria: (name) => `Start walking directions to ${name}`,
+    label: 'Walking directions',
+    towards: (dir, name) => `Walk ${dir} towards ${name}`,
+    then: 'Then',
+    arriving: (name) => `Arriving at ${name}`,
+    min: (m) => `${m} min`,
+    arriveAt: (time) => `arrive ${time}`,
+    exit: 'Exit',
+    recentre: 'Re-centre',
+    compass: 'Compass',
+    search: 'Search along route',
+    sound: 'Sound off',
+    routes: 'Route options',
+    assistant: 'Assistant',
+    started: (name) => `Walking directions to ${name} started.`,
+    arrived: (name) => `You've arrived at ${name}`,
+  },
+
+  district: {
+    label: 'Civic District',
+  },
+
+  stampFx: {
+    announce: (name, n, total) => `Stamp collected: ${name}. ${n} of ${total}.`,
+    label: 'Stamp collected!',
+  },
+
+  arrive: {
+    announce: (name) => `You've arrived at ${name}.`,
+  },
+
+
+  passport: {
+    title: 'Passport',
+    progress: (n, total) => `${n} of ${total} stamps collected`,
+    empty: 'Start the journey to fill your passport with stamps.',
+    finish: 'Finish journey',
+    seeCard: 'See journey card',
+    back: 'Back to map',
+  },
+
+  journey: {
+    title: 'Your journey card',
+    download: 'Download PNG',
+    share: 'Share',
+    claim: 'Claim reward',
+    back: 'Back to map',
+    cardKicker: 'CIVIC TRAIL',
+    cardTheme: (t) => `Theme · ${t}`,
+    stamps: 'Stamps collected',
+    stops: 'Stops visited',
+    distance: 'Distance walked',
+    date: 'Date',
+    footer: 'Civic District Heritage Trail · prototype',
+    shareText: 'I walked the Civic District Heritage Trail in Singapore!',
+    cardPlace: 'Singapore',
+    fileName: 'civic-trail-journey.png',
+  },
+
+  reward: {
+    title: 'Your reward',
+    cardTitle: 'Heritage Explorer Reward',
+    cardValue: '$5 culture voucher',
+    cardSub: (n) => `Earned by collecting ${n} stamp${n === 1 ? '' : 's'}`,
+    claim: 'Claim reward',
+    claimed: 'Reward claimed',
+    claimedBody: 'Show this screen at a participating partner. (Prototype only.)',
+    finePrint:
+      'Prototype for a class presentation. This is not a real voucher, has no cash value and is not affiliated with any government scheme or agency.',
+    back: 'Back',
+  },
+
+  demo: {
+    walkNext: (name) => `Walk to next stop · ${name}`,
+    walkInto: 'Walk into the district',
+    walkDone: 'Journey complete',
+    walking: 'Walking…',
+    stopWalking: 'Stop',
+    reset: 'Reset demo',
+    resetConfirm: 'Reset all progress and return to the start?',
+    gpsOffAuto: 'Switched back to simulated location',
+    open: 'Open demo controls',
+    close: 'Close demo controls',
+  },
+
+  errors: {
+    missingKeyTitle: 'Add your Google Maps key',
+    invalidKeyTitle: "The map couldn't load",
+    steps: [
+      'Open the <code>.env</code> file in the project folder and set <code>GOOGLE_MAPS_API_KEY=</code> to your key.',
+      'Stop the dev server (Ctrl+C) and run <code>npm run dev</code> again.',
+      'In Google Cloud Console → Credentials, add <code>http://localhost:5173/*</code> to the key’s website restrictions.',
+      'Make sure <b>Maps JavaScript API</b> and <b>Routes API</b> are enabled for the project.',
+    ],
+    detail: (msg) => `Details: ${msg}`,
+    retry: 'Reload',
+  },
+};
